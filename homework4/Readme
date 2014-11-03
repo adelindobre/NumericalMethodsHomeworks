@@ -1,0 +1,23 @@
+   Dobre Grigore Adelin 313CC
+        Cerinta 1: Functie Gen2dPoints.m
+             Functie de generare automata e punctelor. 
+	         Pentru aceasta am folosit metoda Halton.
+             Apelez functia halseq cu indexul i si baza 2 pentru vectorul x, baza fiind 3 pentru vectorul y 
+            Punctele generate trebuie incadrate intr-un domeniu cerut . Astfel coordonatle punctelor generate trebuie 
+        adaptate pentru intervalele [a,b], respectiv [c,d].
+
+        Cerinta 2:
+            Functie Trapez.m
+                Calculul integralei folosind metoda trapezelor.
+                In cazul in care doua elemente consecutive din vectorul corespunzator coordonatei x sunt egale se va trece mai departe la urmatoarea iteratie.
+            Functie MonteCarlo.m
+                In cadrul acestei functii determin un dreptunghi ale carui varfuri au drept coordonate cel mai mic si cel mai mare element din vectoorul x, respectiv
+            din vectorul y. N  reprezinta  numarul de puncte generate. Vectorii testx si testy sunt necesari in testarea conditiei daca punctele generate se afla in 
+            interiorul curbei sau nu.  Dupa cum se observa, acesti vectori au ca prin element ultimul element din vectorul x, respectiv y. Nint reprezinta numarul de 
+            puncte din interiorul curbei. Pentru fiecare punct generat se testeaza daca apartine curbei, iar rezultatul este retinut in vectorul cond3
+			    Suma elementelor din vectorul cond3 ne spune daca intr-adevar un punct apartine curbei sau nu.
+                Conditia de apartenenta este aceea ca suma elementelor sa nu se imparta exact la doi. Acest lucru este o consecinta a teoremei lui jordan.
+			    Astfel, daca am trasa o linie orizontala in dreptul punctului pentrua vedea de cate ori intersecteaza conturul poligonului, rezzultatul s-ar interpreta in felul urmator:
+			    Daca numarul de intersectii ar fi impar, inseamna ca punctul apartine poligonului, iar daca este par, atunci nu ar apartine.
+                In cazul in care punctul apartine poligonului, incrementez variabila Nint.
+                in cazul in care conditia abs(A - Aprev )<= tol nu este indeplinita va trece la o noua iteratie
